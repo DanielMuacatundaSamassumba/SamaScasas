@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { schema } from "./../types/FormInputype"
+import { schema } from "../types/LoginDatatype"
 import { yupResolver } from "@hookform/resolvers/yup";
 export default function useLogin() {
     const { register, handleSubmit, formState: { errors } } = useForm({

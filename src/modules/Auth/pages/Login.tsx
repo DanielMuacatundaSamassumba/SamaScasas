@@ -2,8 +2,8 @@ import React from 'react'
 import { House, Mail, Eye } from 'lucide-react'
 import ImageAuth from "./../../../assets/SAMASCASAS 1.png"
 import Input from '../components/Input'
-import { useLocation } from 'react-router-dom'
-import useLogin from '../../hooks/useLogin'
+import { Link, useLocation } from 'react-router-dom'
+import useLogin from '../../../hooks/useLogin'
 
 export default function Login() {
   const { handleSubmit, Onsubmit, errors, register } = useLogin()
@@ -46,12 +46,12 @@ export default function Login() {
             </div>
             <div className='w-full flex flex-col justify-center items-center'>
               <div className='w-11/12 text-end'>
-                <p className='text-sm font-semibold mt-2 cursor-pointer'>Esqueceu a sua senha</p>
+            <Link to={"/forget-password"} >       <p className='text-sm font-semibold mt-2 cursor-pointer'>Esqueceu a sua senha</p></Link>
               </div>
               <button className='bg-black text-white  w-9/12 p-3 rounded-sm mt-3 cursor-pointer'>Entrar</button>
               <div className='w-11/12 text-end'>
                 <p className='text-center text-sm   cursor-pointer mt-3'>
-                  Ainda  não possui uma conta? <span className='font-semibold'>Cadastre-se</span>
+                  Ainda  não possui uma conta? <Link to={"/signup"} className='font-semibold'>Cadastre-se</Link>
                 </p>
               </div>
             </div>

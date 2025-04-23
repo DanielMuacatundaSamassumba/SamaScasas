@@ -5,6 +5,6 @@ interface InputElementsType {
     placeholder: string,
     textLabel:string,
     Icon?:React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>
-    register:any
+    register?:any
 }
 export default InputElementsType
